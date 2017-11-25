@@ -22,6 +22,14 @@ import org.springframework.stereotype.Component;
 @Component
 public class FolderCommands implements CommandMarker {
 
+	/**
+	 * spring shell command that will be executed when called from the
+	 * shell
+	 * 
+	 * @param folderPath
+	 * @param dateFilter
+	 * @return
+	 */
 	@CliCommand(value = "anlz", help = "Analyze Folders")
 	public String analyze(
 			@CliOption(key = { "",
@@ -35,7 +43,11 @@ public class FolderCommands implements CommandMarker {
 	/**
 	 * Does the directory/folder walk, counts number of files in each
 	 * sub-directory and counts the total number of files in the given directory
-	 * accepts folder name and date filter as optional
+	 * accepts folder name and date filter as optional.
+	 * 
+	 * @param folderPath
+	 * @param dateFilter
+	 * @return name of the file that analasis is saved to
 	 */
 	private String directoryWalk(String folderPath, final String dateFilter) {
 		// System.out.println("directoryWalk");
