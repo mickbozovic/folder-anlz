@@ -48,7 +48,7 @@ Folder /some-folder has 0 files
 Total # of files: 6	
 
 In this example some-folder has two sub folders 'a' and 'b'. 'a' subfolder 
-has 4 files: 1,2,3 and 4
+has 4 files: 1,2,3 and 4. Date next to the file is the creation date of that file.
 
 1. Analyze folder for files created on a specific date
 	
