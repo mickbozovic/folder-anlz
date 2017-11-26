@@ -1,0 +1,11 @@
+/home/ubuntu/2techo/dev/th/folder-analyzer/folders/a/1,2017-10-29
+/home/ubuntu/2techo/dev/th/folder-analyzer/folders/a/2,2017-10-30
+/home/ubuntu/2techo/dev/th/folder-analyzer/folders/a/3,2017-10-30
+/home/ubuntu/2techo/dev/th/folder-analyzer/folders/a/4,2017-10-30
+/home/ubuntu/2techo/dev/th/folder-analyzer/folders/b/1,2017-10-30
+/home/ubuntu/2techo/dev/th/folder-analyzer/folders/b/2,2017-10-29
+SUMMARY
+Folder /home/ubuntu/2techo/dev/th/folder-analyzer/folders/b has 2 files
+Folder /home/ubuntu/2techo/dev/th/folder-analyzer/folders/a has 4 files
+Folder /home/ubuntu/2techo/dev/th/folder-analyzer/folders has 0 files
+Total # of files: 6

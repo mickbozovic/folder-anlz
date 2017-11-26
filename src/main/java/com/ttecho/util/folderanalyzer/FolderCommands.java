@@ -61,8 +61,7 @@ public class FolderCommands implements CommandMarker {
 		final Path outputFile = Paths.get(outputFileName);
 		
 		Path start = Paths.get(folderPath);
-		// Path start =
-		// Paths.get("/home/ubuntu/2techo/dev/th/folder-analyzer/folders");
+		
 		try {
 			// should never happen with milisecond timestamp, but just in case
 			Files.deleteIfExists(outputFile);
@@ -81,16 +80,6 @@ public class FolderCommands implements CommandMarker {
 					String fileCreationTime = attrs.creationTime().toString().substring(0, 10);
 					//System.out.println("file creation time: "+ fileCreationTime);
 					String fileAndTime = file.toString()+","+fileCreationTime;
-					//writeToOutputFile(outputFile, file.toString());
-					
-					//writeToOutputFile(outputFile, fileAndTime);
-					
-					// System.out.println("File creation time: " +
-					// attrs.creationTime());
-					// BasicFileAttributes attrs = Files.readAttributes(file,
-					// BasicFileAttributes.class);
-					
-					//System.out.println("date filter: "+ dateFilter);
 					
 					// if date filter is provided only write the file and 
 					// increment the file count if there is a match
@@ -135,15 +124,6 @@ public class FolderCommands implements CommandMarker {
 			//e.printStackTrace();
 			return e.toString();
 		}
-
-		// Show all folders and file count in hashtable.
-
-		StringBuffer buf = new StringBuffer();
-		buf.append("=======================================").append(OsUtils.LINE_SEPARATOR);
-		buf.append("*          Folder Analysis            *").append(OsUtils.LINE_SEPARATOR);
-		buf.append("=======================================").append(OsUtils.LINE_SEPARATOR);
-		// buf.append("Folder # of Files").append(OsUtils.LINE_SEPARATOR);
-
 		
 		/*
 		 * Iteratre through all the stored folders and write the count per folder
@@ -164,19 +144,11 @@ public class FolderCommands implements CommandMarker {
 			totalFiles = totalFiles + Integer.valueOf(filesCount);
 			
 			String fileCountToWrite = "Folder " + folder + " has " + filesCount + " files";
-			//buf.append("Folder " + folder + " has " + filesCount + " files").append(OsUtils.LINE_SEPARATOR);
-			buf.append(fileCountToWrite).append(OsUtils.LINE_SEPARATOR);
-			
-			
 			writeToOutputFile(outputFile, fileCountToWrite);
 		}
 		
 		String totalToWrite = "Total # of files: " + totalFiles;
-		//buf.append("Total # of files: " + totalFiles).append(OsUtils.LINE_SEPARATOR);
-		buf.append(totalToWrite).append(OsUtils.LINE_SEPARATOR);
-		
 		writeToOutputFile(outputFile, totalToWrite);
-		//return buf.toString();
 		
 		// return to the user via shell
 		return "Output saved into: "+ outputFile.toString();
