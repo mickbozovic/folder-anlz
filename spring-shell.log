@@ -276,3 +276,9 @@ exit
 // Spring Shell 1.0.0.RELEASE log opened at 2017-11-25 14:03:12
 anlz /home/ubuntu/2techo/dev/th/folder-analyzer/folders
 anlz /home/ubuntu/2techo/dev/th/folder-analyzer/folders --date 2017-10-30
+// Spring Shell 1.0.0.RELEASE log opened at 2017-11-25 17:57:58
+anlz /home/ubuntu/2techo/dev/th/folder-analyzer/folders --date 2017-10-30
+exit
+// Spring Shell 1.0.0.RELEASE log closed at 2017-11-25 17:59:42
+// Spring Shell 1.0.0.RELEASE log opened at 2017-11-25 18:00:00
+anlz /home/ubuntu/2techo/dev/th/folder-analyzer/folders --date 2017-10-30
